@@ -21,8 +21,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## If the inverse has already been calculated by makeCacheMatrix, it can retrieve the inverse from the cache. 
 cachemean <- function(x, ...) {
         m <- x$getinverse()
-        if(!is.null(m)) {                       ## retrieve the inverse from the cache if the inverse 
-                message("getting cached data")  ## has already been calculated by makeCacheMatrix
+        if(!is.null(m)) {                       ## retrieve the inverse from the cache 
+                message("getting cached data")  ## if the inverse has already been calculated by makeCacheMatrix
                 return(m)
         }
         data <- x$get()                 ## Calculate the inverse of the matrix if m is null
